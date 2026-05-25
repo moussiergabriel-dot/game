@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+		<link rel="stylesheet" href="./build/Styles/fonts.css" />
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: black;
+			}
+			#three-d {
+				margin: 0;
+				padding: 0;
+				overflow: auto;
+				position: absolute;
+			}
+			#video-container {
+				margin: 0;
+				padding: 0;
+				overflow: auto;
+				position: absolute;
+			}
+			#hud-below {
+				position: absolute;
+				margin: 0;
+				padding: 0;
+			}
+			#hud {
+				position: absolute;
+				margin: 0;
+				padding: 0;
+			}
+			#rendering {
+				display: none;
+				overflow: hidden;
+				background-color: green;
+			}
+			.hidden {
+				display: none;
+			}
+		</style>
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "./build/Scripts/Libs/three.module.min.js",
+					"three/examples/jsm/loaders/GLTFLoader": "./build/Scripts/Libs/examples/jsm/loaders/GLTFLoader.js"
+				}
+			}
+		</script>
+		<script type="module" src="./build/Scripts/Libs/howler.min.js"></script>
+	</head>
+	<body>
+		<div id="three-d"></div>
+		<canvas id="hud-below" width="640px" height="480px"></canvas>
+		<video id="video-container" class="hidden" height="480px"></video>
+		<canvas id="hud" width="640px" height="480px"></canvas>
+		<canvas id="rendering" width="4096px" height="4096px"></canvas>
+		<script type="module" src="./build/Scripts/main.js"></script>
+	</body>
+</html>
